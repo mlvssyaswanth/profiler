@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiler</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/25996aba8b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a  href="#" onclick="location.href='index.html'"> <img src="logo1.png" alt="logo"></a>
+        </div>
+        <div class="toggle">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="#" onclick="location.href='index.html'">Home</a></li>
+            <li><a href="#" onclick="location.href='about.html'">About</a></li>
+            <li><a href="#" onclick="location.href='contact.html'">Contact</a></li>
+        </ul>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click",function(){
+                if($(".menu").hasClass("active")){
+                    $(".menu").removeClass("active");
+                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                }else{
+                    $(".menu").addClass("active");
+                    $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+                }
+
+            });
+        });
+    </script>
+    
+
+    <section id="contact">
+  
+        
+        
+        <div class="contact-wrapper">
+        
+        <!-- Left contact page --> 
+        <form
+        action="https://formspree.io/f/xdovoypp"
+        method="POST"
+      >
+      <div class="container">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname"><h3 class="txt">Name</h3></label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="Name" name="Name" placeholder="Name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="mail"><h3>Email</h3></label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" placeholder="eMail">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="num"><h3>Mobile Number</h3></label>
+        </div>
+        <div class="col-75">
+          <input type="tel" id="mobnum" name="Mobile Number" placeholder="Mobile Number">
+        </div>
+      </div>>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject"><h3>Message</h3></label>
+        </div>
+        <div class="col-75">
+          <textarea id="msg" name="Message" placeholder="How do you want your website" style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </div>
+    </form>
+            
+    
+      </section>  
+      <ul>
+        <div></div>
+        <li>
+            <a href="#">
+                 <span class="fa fa-facebook"></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/Vikhyathsai11">
+                <span class="fa fa-github"></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://instagram.com/boga_abhiram1108?igshid=YmMyMTA2M2Y=">
+                <span class="fa fa-instagram"></span>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/yaswanth-mlvss-969a9824a">
+                <span class="fa fa-linkedin"></span>
+            </a>
+        </li>
+        <div></div>
+    </ul>
+    
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-image: url("bgm.svg");
+}
+a,a:hover{
+    text-decoration: none;
+}
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: #ef4b3f;
+}
+.topbar span{
+    color: #fff;
+}
+.topbar ul{
+    list-style: none;
+    display: flex;
+}
+.topbar li{
+    margin: 0px 5px;
+}
+.topbar a{
+    color: #fff;
+    padding-right: 25px;
+}
+.topbar a:hover{
+    color: #222;
+}
+.logo img{
+    width: 100px;
+    /* margin-right: 10px; */
+}
+
+nav{
+    background: #222;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: #fff;
+}
+nav a:hover{
+    color: #ef4b3f;
+}
+.logo{
+    flex:1;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+.logo a:hover{
+    color: #fff;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li{
+    padding: 15px 10px;
+    font-size: 16px;
+
+}
+.toggle{
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width:600px)  {
+    nav{
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+    }   
+    .menu{
+        margin-top: 15px;
+        display: none;
+    }
+}
+.menu.active,.toggle{
+    display: block;
+}
+.toggle{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+/* .topbar.li{
+    margin-right: 25px;
+} */
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+
+}
+#home::before{
+     content: "";
+     position: absolute;
+     height: 9000px;
+     width: 100%;
+     background-color: #2f2f2f;
+}
+.headings{
+    color: #fff;
+}
+.main{
+    margin: 50px;
+}
+
+.w1{
+    width: 50%;
+    height: auto;
+    /* margin-top: 80px; */
+    margin: 500px;
+}
+.w2{
+    width: 15%;
+    height: 17%;
+    margin-top: 5%;
+    margin-left: 5%;     
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+input[type=number],[type=text]{
+    color: #252525;
+    background-color: #F7F5EB;
+    height: 25px;
+    padding: 5px;
+}
+input[type=submit] {
+    background-color: #A5C9CA;
+    color: #F7F5EB;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  
+  input[type=submit]:hover {
+    background-color: #D8D9CF;
+    color: #252525;
+  }

@@ -1,0 +1,265 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-image: url("bgm.svg");
+}
+a,a:hover{
+    text-decoration: none;
+}
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: #ef4b3f;
+}
+.topbar span{
+    color: #fff;
+}
+.topbar ul{
+    list-style: none;
+    display: flex;
+}
+.topbar li{
+    margin: 0px 5px;
+}
+.topbar a{
+    color: #fff;
+    padding-right: 25px;
+}
+.topbar a:hover{
+    color: #222;
+}
+.logo img{
+    width: 100px;
+    /* margin-right: 10px; */
+}
+
+nav{
+    background: #222;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: #fff;
+}
+nav a:hover{
+    color: #ef4b3f;
+}
+.logo{
+    flex:1;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+.logo a:hover{
+    color: #fff;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li{
+    padding: 15px 10px;
+    font-size: 16px;
+
+}
+.toggle{
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width:600px)  {
+    nav{
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+    }   
+    .menu{
+        margin-top: 15px;
+        display: none;
+    }
+}
+.menu.active,.toggle{
+    display: block;
+}
+.toggle{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+/* .topbar.li{
+    margin-right: 25px;
+} */
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+
+}
+#home::before{
+     content: "";
+     position: absolute;
+     height: 9000px;
+     width: 100%;
+     background-color: #2f2f2f;
+}
+.headings{
+    color: #fff;
+}
+.main{
+    margin: 50px;
+}
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  } 
+  
+  :root {
+    --card-height: 300px;
+    --card-width: calc(var(--card-height) / 1.5);
+  }
+  
+  
+   body {
+    min-height: 100vh;
+ 
+     display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box; 
+  } 
+  h1{
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+  }
+  h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: #264dfc;
+    /* bottom: -10px; */
+    margin-top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+        width:50px;
+    }    
+    50%{
+        width:150px;
+    }
+    100%{
+        width:50px;
+    }
+}
+  
+  
+  .card {
+    margin-top: 20px;
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    padding: 8px;
+    position: relative;
+    border-radius: 6px;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+    /* display: flex; */
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+    margin-left: 90px;
+  } 
+  .flex{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+   .card:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  } 
+   .card:hover:before, .card:hover:after {
+    animation: none;
+    opacity: 0;
+  } 
+  
+  
+   .card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  } 
+  
+   .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  } 
+  
+   @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  } 
+  
+  a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+  } 
+  .img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+  }
+h2{
+    margin-left: 90px;
+    color:#fff;
+}

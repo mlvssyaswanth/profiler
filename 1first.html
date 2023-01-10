@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiler</title>
+    <link rel="stylesheet" href="1first.css">
+    <script type='text/javascript' src='../../hplussport.com/wp-includes/js/jquery/jquery4a5f.js?ver=1.12.4-wp'>
+	</script>
+	<script type='text/javascript' src='../../hplussport.com/wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'>
+	</script>
+
+    <!-- <link rel="text/javascript" href="1first.js"> -->
+    
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a  href="#" onclick="location.href='index.html'"> <img src="logo1.png" alt="logo"></a>
+        </div>
+        <div class="toggle">
+            <a href="#" ><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="#" onclick="location.href='index.html'">Home</a></li>
+            <li><a href="#" onclick="location.href='about.html'">About</a></li>
+            <li><a href="#" onclick="location.href='contact.html'">Contact</a></li>
+        </ul>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click",function(){
+                if($(".menu").hasClass("active")){
+                    $(".menu").removeClass("active");
+                    $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                }else{
+                    $(".menu").addClass("active");
+                    $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+                }
+
+            });
+        });
+    </script>
+    <input type="image" src="1first.png" class="w1">
+    <input type="image" src="1firstp.png" class="w2">    
+    <br></br>
+    <br></br>
+<form class="cart" id="cart">    
+    
+    <div class="NOS">
+        <label for="noOfSets" style="color: antiquewhite;"><h3>Number Of Pages</h3></label>
+        <input type="number" min="0" id="noOfSets" size="3" placeholder="0">
+    </div>
+    <br></br>
+    <label for="btn-estimate" style="color: antiquewhite;"><h3>Click to estimate:</h3></label><br>
+    <input type="submit" value="Estimate Total" id="btn-estimate">
+    <input type="text" id="txt-estimate" placeholder="Rs.0">
+    <br><br>
+    <div class="row">
+        <input type="submit" onclick="location.href='contact.html'" value="CONTACT US">
+      </div>
+   
+</form>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<script  src="1first.js"></script>
+</body>
+</html>

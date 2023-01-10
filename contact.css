@@ -1,0 +1,250 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-image: url("bgm.svg");
+}
+a,a:hover{
+    text-decoration: none;
+}
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: #ef4b3f;
+}
+.topbar span{
+    color: #fff;
+}
+.topbar ul{
+    list-style: none;
+    display: flex;
+}
+.topbar li{
+    margin: 0px 5px;
+}
+.topbar a{
+    color: #fff;
+    padding-right: 25px;
+}
+.topbar a:hover{
+    color: #222;
+}
+.logo img{
+    width: 100px;
+    /* margin-right: 10px; */
+}
+
+nav{
+    background: #222;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+nav a{
+    color: #fff;
+}
+nav a:hover{
+    color: #ef4b3f;
+}
+.logo{
+    flex:1;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+}
+.logo a:hover{
+    color: #fff;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li{
+    padding: 15px 10px;
+    font-size: 16px;
+
+}
+.toggle{
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width:600px)  {
+    nav{
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+    }   
+    .menu{
+        margin-top: 15px;
+        display: none;
+    }
+}
+.menu.active,.toggle{
+    display: block;
+}
+.toggle{
+    position: absolute;
+    top: 8px;
+    right: 20px;
+}
+/* .topbar.li{
+    margin-right: 25px;
+} */
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+
+}
+#home::before{
+     content: "";
+     position: absolute;
+     height: 9000px;
+     width: 100%;
+     background-color: #2f2f2f;
+}
+.headings{
+    color: #fff;
+}
+.main{
+    margin: 50px;
+}
+
+
+
+input[type=text],[type=tel],textarea,[type=email] {
+  width: 65%;
+  padding: 12px;
+  border: 1px solid #E1D7C6;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #A5C9CA;
+  color: #F7F5EB;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 26%;
+}
+
+input[type=submit]:hover {
+  background-color: #D8D9CF;
+  color: #252525;
+}
+
+.container {
+  border-radius: 5px;
+
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  margin-left: 25%;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  margin-left: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h3{
+  color: #A5C9CA;
+  float: left;
+
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+@import url(//maxcdn.bootstrapcdn.com/font- awesome/4.3.0/css/font-awesome.min.css"):
+
+body{
+    background: #131315;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%,-50%) ;
+    display: flex ;
+    padding: '#'' ;
+}
+ul div{
+    width: 40px;
+    height: 5px;
+    
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    margin:  20px;
+}
+ul li span{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    background: #2a2a2a;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px!important;
+    transition: 1.5s ease-out;
+}
+ul li hover span{
+    transition: .3s;
+}
+ul li:nth-child(2):hover span{
+    background: #2C3456 !important;
+}
+
+ul li:nth-child(3):hover span{
+    background: #6A9AEE !important;
+}
+ul li:nth-child(4):hover span{
+    background: #CC296C !important;
+}
+ul li:nth-child(5):hover span{
+    background: #2C3456 !important;
+}
